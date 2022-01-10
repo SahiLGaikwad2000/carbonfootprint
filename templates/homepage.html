@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+{% set a=0 %}
+
+<head>
+    <title>
+
+    </title>
+    <script type="text/javascript">
+        function cmd(a) {
+            var x = parseInt(a);
+            x += 1;
+            window.alert(x);
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="{{ url_for('check')}}" method='post'>
+        <h1>{{val}}</h1>
+        <button name='but' value={{val}} type='submit'>Submit</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact V4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="/static/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/bootsrap.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/animate.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/hamburgers.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/animsition.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/select2.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/daterangepicker.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+    <form action="{{ url_for('test')}}">
+        <div class="container-contact100">
+            <div class="wrap-contact100">
+                <form class="contact100-form validate-form">
+                    <span class="contact100-form-title">
+                        Technical Details
+                    </span>
+
+                    <div class="wrap-input100 input100-select">
+                        <span class="label-input100">Hardware Type </span>
+                        <div>
+                            <select class="selection-2" name="tcar">
+                                <option>Choose</option>
+                                <option>A100 PCIe 40/80GB</option>
+                                <option>A100 SXM4 80 GB</option>
+                                <option>AGX Xavier</option>
+                                <option>AMD RX480</option>
+                                <option>GTX 1080 Ti</option>
+                                <option>GTX 1080</option>
+                                <option>GTX 750</option>
+                                <option>GTX TITAN X</option>
+                                <option>Intel Xeon E5-2699</option>
+                                <option>Quadro K6000</option>
+                                <option>Quadro P6000</option>
+                                <option>RTX 2080 Ti</option>
+                                <option>RTX 2080</option>
+                                <option>RTX 8000</option>
+                                <option>T4</option>
+                                <option>Tesla K40c</option>
+                                <option>Tesla K80</option>
+                                <option>Tesla M40 24GB</option>
+                                <option>Tesla P100</option>
+                                <option>Tesla V100-PCIE-16GB</option>
+                                <option>Tesla V100-SXM2-16GB</option>
+                                <option>Tesla V100-SXM2-32GB</option>
+                                <option>Titan RTX</option>
+                                <option>Titan V</option>
+                                <option>TITAN X Pascal</option>
+                                <option>Titan Xp</option>
+                                <option>TPUv2 Chip</option>
+                                <option>TPUv3 Chip</option>
+
+                               
+                            </select>
+                        </div>
+
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 input100-select">
+                        <span class="label-input100">Hours Used </span>
+                        <div>
+                            <select class="selection-2" name="tbike">
+                                <option>Choose</option>
+
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+
+                        <span class="focus-input100"></span>
+                    </div>
+
+
+
+                    <div class="wrap-input100 input100-select">
+                        <span class="label-input100">Provider </span>
+                        <div>
+                            <select class="selection-2" name="service">
+                                <option>Choose</option>
+                                <option>Google Cloud Service</option>
+                                <option>Amazon Web Services</option>
+                                <option>Azure</option>
+                                <option>Private Infrastructure</option>
+                                
+
+                            </select>
+                        </div>
+
+                        <span class="focus-input100"></span>
+                    </div>
+                    
+                    <div class="wrap-input100 input100-select">
+                        <span class="label-input100">Region of Compute</span>
+                        <div>
+                            <select class="selection-2" name="service">
+                                <option>Choose</option>
+
+                                
+
+                            </select>
+                        </div>
+
+                        <span class="focus-input100"></span>
+                    </div>
+
+
+
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button class="contact100-form-btn">
+                                <span>
+                                    Submit
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="container-contact100-form-btn">
+                        <div class="wrap-contact100-form-btn">
+                            <div class="contact100-form-bgbtn"></div>
+                            <button class="contact100-form-btn">
+                                <span>
+                                    Back to Home
+                                    <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+
+    </form>
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/jquery-3.2.1.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/animsition.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/popper.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/select2.min.js') }}"></script>
+    <script>
+        $(".selection-2").select2({
+            minimumResultsForSearch: 20,
+            dropdownParent: $('#dropDownSelect1')
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/moment.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/daterangepicker.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/countdowntime.js') }}"></script>
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/Log.css') }}">
+
+    <title>
+
+    </title>
+</head>
+
+<body>
+    
+        <div class="container" onclick="onclick">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center">
+                <form action="{{ url_for('afterlog')}}" method="post"></form>
+                    <h2>Please Sign In</h2>
+                    <input type="email" name="lname" placeholder="email">
+                    <input type="password" name="lpass" placeholder="password">
+                    <button type="submit">Login</button>
+                    <h2>&nbsp;</h2>
+                </form>
+            </div>
+        </div>
+            
+    
+    <!-- {% if co==1 %}
+    <h1>Already exist</h1>
+    {% endif %} -->
+
+</body>
+
+</html>
+

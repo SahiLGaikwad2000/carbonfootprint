@@ -1,0 +1,65 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <form action="{{ url_for('afterlog')}}" method="post">
+        <input type="text" name="lname" placeholder="email">
+        <input type="password" name="lpass" placeholder="password">
+
+        <button type="submit">Login</button>
+    </form>
+    {% if co==1 %}
+    <h1>Already exist</h1>
+    {% endif %}
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/LoginCss.css') }}">
+
+    <title>
+
+    </title>
+</head>
+
+<body>
+
+    <div class="container" onclick="onclick">
+        <p style="font-size:90px" align="center">Aero</p>
+        <br><br>
+        <div></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <form action="{{ url_for('afterlog')}}" method="post">
+                <div align="center">
+                    <br><br>
+                    <h2>Please Login In</h2>
+                </div>
+                <input type="text" name="lname" placeholder="email">
+                <input type="password" name="lpass" placeholder="password">
+                <div align="center"><button type="submit">Login</button></div>
+                <h2>&nbsp;</h2>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- {% if co==1 %}
+    <h1>Already exist</h1>
+    {% endif %} -->
+
+</body>
+
+</html>

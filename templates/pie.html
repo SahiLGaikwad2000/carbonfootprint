@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/main.css') }}">
+    <meta charset="UTF-8">
+    <title>Your Carbon Footprint Breakdown is :</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                {% for key, value in data.items() %}
+        {% if value is string %}
+        ['{{ key }}', '{{ value }}'],
+            {% else %}
+        ['{{ key }}', {{ value }}],
+            {% endif %}
+        {% endfor %}
+        ]);
+
+        var options = {
+            title: 'Household Factors',
+            is3D: true,
+            'height': 700,
+            'width': 700
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+
+        chart.draw(data, options);
+        
+      }
+    </script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data1 = google.visualization.arrayToDataTable([
+                {% for key, value in data1.items() %}
+        {% if value is string %}
+        ['{{ key }}', '{{ value }}'],
+            {% else %}
+        ['{{ key }}', {{ value }}],
+            {% endif %}
+        {% endfor %}
+        ]);
+
+        var options = {
+            title: 'Transportation Factors',
+            is3D: true,
+            'height': 700,
+            'width': 700
+
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart1_3d'));
+
+        chart.draw(data1, options);
+        
+      }
+    </script>
+
+</head>
+
+<body>
+
+    
+    <div style="margin: 10px 0 0 10px;width: 1400px">
+        
+        <h1 style="text-align: center;">Your Carbon Footprint Value is {{final}} metric tonnes</h1><br>
+        <h2 style="text-align: center;">Your Carbon Footprint Breakdown is:</h2>
+    
+        <div style="float:left" id="piechart_3d" style="width: 900px; height: 500px;"></div>
+        <div style="float:right " id="piechart1_3d" style="width: 900px; height: 500px;"></div>
+
+
+
+
+
+
+
+    </div>
+    
+        <h2 style="text-align:center">Suggestive Measures to reduce Carbon Footprint</h2>
+        <div style="padding: 1in;">
+            <h2>Electricity</h2><br>
+            <h3>Limit use of Air conditioner<br>
+            Replace regular bulbs with LED lighting.<br>
+            Prefer 5 star Rated electric appliances.</h3><br>
+            <h2>Transport</h2><br>
+            <h3>Increase use of cycle or use public transport<br>
+                Be smart about when and how you drive<br> 
+                Try the train for your next holiday</h3><br>
+            <h2>Food</h2><br>
+            <h3>Consume local and seasonal products (forget strawberries in winter)<br> 
+                Limit meat consumption <br>
+                Select fish from sustainable fishing </h3><br>
+            <h2>Clothing</h2><br>
+            <h3>Take good care of your clothes<br>
+                Try swapping, borrowing, renting or buying second-hand<br>
+                Buy responsibly-made clothes, e.g. made from recycled material or with an eco-label</h3>
+
+
+            
+        
+            
+
+        </div>
+        <form action="{{ url_for('test')}}">
+        <div class="container-contact100-form-btn">
+            <div class="wrap-contact100-form-btn">
+                <div class="contact100-form-bgbtn"></div>
+                <button class="contact100-form-btn">
+                    <span>
+                        Back to Home
+                        <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/LoginCss.css') }}">
+</head>
+
+<body>
+    <div class="container" onclick="onclick">
+        <p style="font-size:90px" align="center">Aero</p>
+        <br><br>
+
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <form action="{{ url_for('basic')}}" method="post">
+                <div align="center">
+                    <h2>Please SignUp</h2>
+                </div>
+                <input type="text" name="name" placeholder="Username" autocomplete="off">
+                <input type="password" name="pass" placeholder="Password">
+
+                <div align="center"><button type="submit">submit</button></div>
+            </form>
+            {% if co==1 %}
+            <h1>Already exist</h1>
+            {% endif %}
+
+        </div>
+    </div>
+
+</body>
+
+</html>
